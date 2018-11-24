@@ -1,26 +1,37 @@
-.App {
-  text-align: center;
+main {
+  position: relative;
+  margin:10% 0;
+  padding : 30px;
+  background: #3c6382;
 }
+button.badge {
+  font-size: 1.3em;
+}
+section article {
+  text-align: right;
+}
+#itemsCartList {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:70vh;
+  background-color: #f8c291;
+  z-index: 3;
+}
+#itemsCartList > .fa{
+  float: right;
+  margin: 15px 20px;
+  color:#e55039;
+  cursor: pointer;
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
