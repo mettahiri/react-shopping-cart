@@ -1,37 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Nanum+Gothic|ZCOOL+XiaoWei');
 main {
-  position: relative;
   margin:10% 0;
   padding : 30px;
-  background: #3c6382;
+  font-family: 'Amaranth', serif;
+/*   background: #a0a6b7;*/ 
+  background: #555;
+  box-shadow: 0px 0px 5px #000;
+
+
+}
+.textCart img {
+  width : 100px;
+}
+.textCart{
+  float: left;
+  color : white;
 }
 button.badge {
   font-size: 1.3em;
 }
 section article {
   text-align: right;
+  box-shadow: 0px 0px 5px #555;
+  animation : zoomIn 1s;
+
 }
-#itemsCartList {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height:70vh;
-  background-color: #f8c291;
-  z-index: 3;
-}
-#itemsCartList > .fa{
-  float: right;
-  margin: 15px 20px;
-  color:#e55039;
-  cursor: pointer;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
+.items {
+  width : 100%
+}
+.items h2 {
+  color : #333;
+  margin : "5px 0";
+}
+.items .fas {
+  color :rgb(169, 191, 210);
+}
+#itemsCartList {
+ margin:0;
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 0px 0px 5px #555;
+  padding : 10px;
+  text-align: right;
+  border-radius: 2px;
+}
+#itemsCartList > .fa{
+  color:#e55039;
+  cursor: pointer;
+
+}
+
+
+#itemsCartList  h2{
+  color:#910f0f;
+  margin-bottom:30px;
+  font-weight: bold;
+}
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+  margin: 30px 0;
+  border : 5px solid lightgray;
+  width : 100%;
+
+}
+caption{
+  background-color: #1e1e1e;
+  caption-side: top;
+  text-align: center;
+  font-size: 2em;
+
+}
+tr button {
+  padding:3px 5px;
+  display: block;
+  margin : 0 auto;
+  border: none;
+  font-size: 10px;
+  background:rgba(255, 255, 255,0);
+  color: black;
+}
+tr button .fas{
+  font-size: 13px;
+}
+td{
+  padding:3px;
+  border:1px solid lightgray;
+  font-size: 13px;
+
+}
+td span{
+padding: 2px;
+display: inline-block;
+}
+
+tr:nth-child(odd){
+  background: rgb(228, 232, 255);
+
+}
+
+.if_zero{
+color :red;
+animation : flash 1s;
+}
+.faImg{
+  display: block;
+  font-size: 100px;
+}
+
+
+
+@media screen and (min-width:768px){
+
+  .faImg{
+    display: block;
+    font-size: 50px;
+  }
+  #itemsCartList {
+     padding : 20px;
+   }
+  .items {
+    width : 30%;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  tr button {
+    padding:0px 12px;
+    display: inline-block;
+    margin : 0 0;
+    border: none;
+    font-size: 25px
+  }
+  tr button .fas{
+    font-size: 15px;
+    margin:0;
+    padding:0;
+  }
+  td{
+    padding:15px;
+    border:1px solid lightgray;
+  }
+  td span{
+    padding: 3px;
+    display: inline-block;
+    width:50px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+  .faImg{
+    display: block;
+    font-size: 50px;
+  }
+  td{
+    padding:15px;
+    font-size: 20px;
+    border:1px solid lightgray;
+  }
+
+} 
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
 }
-
 
 @keyframes App-logo-spin {
   from {

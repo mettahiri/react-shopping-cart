@@ -5,40 +5,49 @@ class Items extends Component {
         items : [
             {   
                 id:1,
-                titre : "Item1",
+                faImg : "fa-mobile-alt",
+                titre : "Item-1",
                 description : "Lorem epsum dolor",
                 prix : 35.5,
+                total:0,
                 qtt:0
             },
             {   
                 id:2,
-                titre : "Item2",
+                faImg : "fa-laptop",
+                titre : "Item-2",
                 description : "Construct sit boom",
                 prix : 20.5,
+                total:0,
                 qtt:0
-
             },
             {
                 id:3,
-                titre : "Item3",
+                faImg : "fa-tv",
+                titre : "Item-3",
                 description : "Cosmoc paraxi del akui",
                 prix : 15.00,
+                total:0,
                 qtt:0
-
             }
         ]
      }
-    
-     addItem = (itm) => this.props.addItem(itm)
-
      
+    addItem = (itm) => this.props.addItem(itm)
+
     render() { 
-        const ITEMS = this.state.items.map(item => <Item key={item.id} items={item} addItem={this.addItem} /> )
+        const ALL_ITEMS = this.state.items.map(item=>(
+            <Item key={item.id} 
+             items={item} 
+             addItem={this.addItem} 
+            /> 
+        ));
+
         return ( 
-            <section className="col-10 offset-1">
-               {ITEMS}
+            <section className="container">
+               {ALL_ITEMS}
             </section>
-         );
+        );
     }
 }
 
